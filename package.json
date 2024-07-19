@@ -1,0 +1,23 @@
+{
+  "name": "first-node-project",
+  "version": "1.0.0",
+  "description": "This is my first node project in kodemia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "erick": "echo 'Hello Erick'",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "node",
+    "learn",
+    "kodemia",
+    "npm"
+  ],
+  "author": "@ErickVeraC",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
