@@ -30,26 +30,30 @@ const countNames = (names) => names.length;
 /* Función hasDuplicates:
 Esta función verifica si hay nombres duplicados utilizando un Set para comparar el tamaño del 
 conjunto de nombres únicos con la longitud del array original.*/
-const hasDuplicates = (names) => {
-  const uniqueNames = new Set(names);
-  return uniqueNames.size !== names.length;
-};
+function hasDuplicates(names) {
+  let uniqueNames = [];
+  for (let name of names) {
+    if (uniqueNames.includes(name)) return true;
 
+    uniqueNames.push(name);
+  }
+  return false;
+}
 /* Función findLongestName: 
 Esta función encuentra el nombre más largo utilizando el método reduce.*/
-const findLongestName = (names) => {
+function findLongestName(names) {
   return names.reduce((longest, current) => {
     return current.length > longest.length ? current : longest;
   }, "");
-};
+}
 
 /* Función findShortestName:
 Esta función encuentra el nombre más corto utilizando el método reduce.*/
-const findShortestName = (names) => {
+function findShortestName(names) {
   return names.reduce((shortest, current) => {
     return current.length < shortest.length ? current : shortest;
   }, names[0]);
-};
+}
 
 /* Llamadas a las funciones:
 Finalmente, se llaman las funciones para obtener la información deseada y se imprimen los resultados.*/
